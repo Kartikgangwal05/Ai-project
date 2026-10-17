@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JourneyX – Customer Journey Mapper</title>
+    <meta name="description" content="Every Customer Has a Story. Map Every Moment. AI-powered customer journey mapping SaaS with stage timelines, emotion curves, touchpoint friction analysis, impact matrix, and multimodal document insights." />
+    <meta property="og:title" content="JourneyX – Customer Journey Mapper" />
+    <meta property="og:description" content="Every Customer Has a Story. Map Every Moment. AI-powered customer journey mapping SaaS with stage timelines, emotion curves, touchpoint friction analysis, impact matrix, and multimodal document insights." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Defensive safeguard: Ensure window.fetch has both getter and setter so browser extensions and iframe interceptors do not throw TypeError
+      (function () {
+        try {
+          var _origFetch = window.fetch;
+          var _currentFetch = _origFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function () {
+              return _currentFetch;
+            },
+            set: function (val) {
+              _currentFetch = val;
+            },
+            configurable: true,
+            enumerable: true,
+          });
+        } catch (e) {
+          // ignore
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

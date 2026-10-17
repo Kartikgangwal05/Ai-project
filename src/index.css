@@ -1,0 +1,232 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-navy-950: #020612;
+    --color-navy-900: #050b1d;
+    --color-navy-850: #081028;
+    --color-navy-800: #0f1a3a;
+    --color-navy-700: #1a2850;
+    --color-purple-accent: #8b5cf6;
+    --color-electric-violet: #7c3aed;
+    --color-lavender-accent: #c4b5fd;
+    --color-cyan-accent: #06b6d4;
+    --color-neon-cyan: #22d3ee;
+    --color-neon-pink: #f43f5e;
+    --color-neon-magenta: #d946ef;
+    --color-neon-emerald: #10b981;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #030712;
+    color: #f8fafc;
+    overflow-x: hidden;
+  }
+}
+
+/* Radiant Ambient Mesh Background with Vibrant Neon Deep-Navy Transitions */
+.app-grid-bg {
+  background-color: #030712;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.22) 0px, transparent 48%),
+    radial-gradient(at 100% 0%, rgba(6, 182, 212, 0.18) 0px, transparent 45%),
+    radial-gradient(at 50% 30%, rgba(139, 92, 246, 0.10) 0px, transparent 50%),
+    radial-gradient(at 85% 65%, rgba(217, 70, 239, 0.12) 0px, transparent 50%),
+    radial-gradient(at 15% 85%, rgba(16, 185, 129, 0.10) 0px, transparent 45%),
+    radial-gradient(at 50% 95%, rgba(6, 182, 212, 0.12) 0px, transparent 50%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+  background-attachment: fixed;
+}
+
+/* Sophisticated Glassmorphism Card System */
+.glass-panel {
+  background: rgba(8, 14, 32, 0.76);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 
+    0 12px 36px -10px rgba(0, 0, 0, 0.65),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.glass-panel-interactive {
+  background: rgba(8, 14, 34, 0.74);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 
+    0 12px 32px -10px rgba(0, 0, 0, 0.6),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.10);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-interactive:hover {
+  background: rgba(14, 23, 50, 0.85);
+  border-color: rgba(139, 92, 246, 0.45);
+  box-shadow: 
+    0 24px 48px -15px rgba(124, 58, 237, 0.28),
+    0 0 20px -2px rgba(6, 182, 212, 0.18),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+.glass-card-subtle {
+  background: rgba(6, 11, 26, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Subtle Animated Shifting Gradients for Active States */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient-active {
+  background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 25%, #06b6d4 55%, #d946ef 85%, #7c3aed 100%);
+  background-size: 250% 250%;
+  animation: gradientShift 6s ease infinite;
+}
+
+.animated-gradient-border {
+  position: relative;
+}
+
+.animated-gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, #8b5cf6, #06b6d4, #f43f5e, #a855f7, #06b6d4);
+  background-size: 300% 300%;
+  animation: gradientShift 5s ease infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.animated-neon-glow {
+  position: relative;
+}
+
+.animated-neon-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 25px rgba(124, 58, 237, 0.35), 0 0 10px rgba(6, 182, 212, 0.25);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* Neon Glow Accents */
+.neon-glow-violet {
+  box-shadow: 0 0 30px -4px rgba(139, 92, 246, 0.5);
+}
+
+.neon-glow-cyan {
+  box-shadow: 0 0 30px -4px rgba(6, 182, 212, 0.5);
+}
+
+.neon-glow-magenta {
+  box-shadow: 0 0 30px -4px rgba(244, 63, 94, 0.5);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.35);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.7);
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 12s linear infinite;
+}
+
+@keyframes pulseSlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.015);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 4s ease-in-out infinite;
+}
+
+/* Print Styles for Presentation-Ready Export */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-page-break {
+    page-break-after: always;
+  }
+
+  .card-print {
+    box-shadow: none !important;
+    border: 1px solid #e2e8f0 !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+}
+

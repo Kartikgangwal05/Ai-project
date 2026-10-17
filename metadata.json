@@ -1,0 +1,6 @@
+{
+  "name": "JourneyX – Customer Journey Mapper",
+  "description": "Every Customer Has a Story. Map Every Moment. AI-powered customer journey mapping SaaS with stage timelines, emotion curves, touchpoint friction analysis, impact matrix, and multimodal document insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
